@@ -119,4 +119,119 @@ Task.3:-Explain the use of grid-auto-row and grid-auto-column using code example
  Answer:- grid-auto-row and grid-auto-column are properties used in CSS Grid Layout to specify the size of rows and columns that are created implicitly to accommodate additional content beyond what is defined in the grid template.
 
 Here's how you can use grid-auto-row and grid-auto-column with code examples:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 100px 100px;     
+      grid-auto-rows: 50px;
+      grid-auto-columns: 50px; 
+      gap: 5px;
+    }    
+    .grid-item {
+      background-color: lightblue;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+   <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+    <div class="grid-item">10</div>
+  </div>
+</body>
+</html>
+
+The .grid-container class sets up a grid-container with explicit columns of 100 pixels each.
+grid-auto-rows is set to 50 pixels, meaning any rows created implicitly to accommodate additional content will have a height of 50 pixels.
+grid-auto-columns is set to 50 pixels, meaning any columns created implicitly to accommodate additional content will have a width of 50 pixels.
+
+When you add more items than the explicitly defined grid can accommodate, additional rows and columns are created implicitly. These implicit rows and columns will have a size defined by grid-auto-rows and grid-auto-columns, respectively.
+
+Task.4:-Write CSS to show numbers as shown in the figure, without altering the below html code.
+<br>
+Answer:- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid-container {
+      border: 1px solid black ;
+      gap: 20px;
+      padding:50px;
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      
+    }
+    .box{
+      height: 150px;
+    border: 2px solid black ;
+    border-radius:10px;
+    gap:2px;
+    font-size: 150%;
+    }
+    .box-1{
+      background-color: grey;
+      order: 7;
+    }
+    .box-2{
+      background-color:rgb(246, 240, 240) ;
+      order:8;
+    }
+    .box-3{
+      background-color: grey;
+      order:1;
+    }
+    .box-4{
+      background-color: rgb(246, 240, 240);
+      order:2;
+    }
+    .box-5{
+      background-color: grey;
+      order: 3;
+    }
+    .box-6{
+      background-color: rgb(246, 240, 240);
+      order:4;
+    }
+    .box-7{
+      background-color:grey;
+      order:5;
+    }
+    .box-8{
+      background-color:rgb(246, 240, 240);
+      order:6;
+    }
+    </style>
+</head>
+<body>
+   <div class="grid-container">
+    <div class="box box-1">1</div>
+    <div class="box box-2">2</div>
+    <div class="box box-3">3</div>
+    <div class="box box-4">4</div>
+    <div class="box box-5">5</div>
+    <div class="box box-6">6</div>
+    <div class="box box-7">7</div>
+    <div class="box box-8">8</div>
+  </div>
+</body>
+</html>
+
+
 
